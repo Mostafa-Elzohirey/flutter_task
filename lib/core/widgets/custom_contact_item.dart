@@ -16,6 +16,7 @@ class CustomContactItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
+      iconColor: salmon,
       collapsedShape: LinearBorder.none,
       shape: LinearBorder.none,
       title: Text(label),

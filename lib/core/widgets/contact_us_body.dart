@@ -25,7 +25,7 @@ class ContactUsBody extends StatelessWidget {
                     size: 28,
                     color: Colors.black,
                   ),
-                  contactOption: Text("data"),
+                  contactOption: Text("Customer Service Chat"),
                   onTap: () {
                     Get.toNamed(Routes.chatView);
                   },
@@ -49,7 +49,7 @@ class ContactUsBody extends StatelessWidget {
                     size: 28,
                     color: Colors.black,
                   ),
-                  contactOption: Text("data"),
+                  contactOption: Text("Facebook page"),
                   onTap: () {
                     _launchURL('https://www.facebook.com');
                   },
