@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_task/core/constants/colors.dart';
 import 'package:flutter_task/core/functions/send_message.dart';
+import 'package:flutter_task/core/widgets/custom_chat_icon.dart';
 import 'package:flutter_task/core/widgets/custom_text_field.dart';
 
 class ChatBox extends StatelessWidget {
@@ -26,6 +27,7 @@ class ChatBox extends StatelessWidget {
             CustomChatIcon(
               controller: controller,
               icon: const Icon(Icons.camera_alt_outlined, color: salmon),
+              onPressed: () {},
             ),
             SizedBox(width: 5),
             Expanded(
@@ -35,57 +37,25 @@ class ChatBox extends StatelessWidget {
               ),
             ),
             SizedBox(width: 5),
-            CircleAvatar(
-              radius: 20,
-              backgroundColor: white,
-              child: IconButton(
-                icon: const Icon(Icons.mic, color: salmon),
-                onPressed: () {},
-              ),
+            CustomChatIcon(
+              controller: controller,
+              icon: const Icon(Icons.mic, color: salmon),
+              onPressed: () {},
             ),
             SizedBox(width: 5),
-            CircleAvatar(
-              backgroundColor: white,
-              child: IconButton(
-                icon: const Icon(Icons.send_outlined, color: salmon),
-                onPressed: () {
-                  final text = controller.text.trim();
-                  if (text.isNotEmpty) {
-                    sendMessage(text, 'user');
-                    controller.clear();
-                  }
-                },
-              ),
+            CustomChatIcon(
+              controller: controller,
+              icon: const Icon(Icons.send_outlined, color: salmon),
+              onPressed: () {
+                final text = controller.text.trim();
+                if (text.isNotEmpty) {
+                  sendAndReceiveMessage(text, 'user');
+                  controller.clear();
+                }
+              },
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class CustomChatIcon extends StatelessWidget {
-  const CustomChatIcon({
-    super.key,
-    required this.controller,
-    required this.icon,
-  });
-
-  final TextEditingController controller;
-  final Icon icon;
-  @override
-  Widget build(BuildContext context) {
-    return CircleAvatar(
-      radius: 20,
-      backgroundColor: white,
-      child: IconButton(
-        icon: icon,
-        onPressed: () {
-      final text = controller.text.trim();
-      if (text.isNotEmpty) {
-        sendMessage(text, 'user');
-        controller.clear();}
-        },
       ),
     );
   }

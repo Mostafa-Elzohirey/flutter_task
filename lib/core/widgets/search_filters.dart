@@ -17,21 +17,21 @@ class SearchFilters extends StatelessWidget {
             spacing: 10,
             children: [
               FilterChip(
-                label: const Text('By Category'),
+                label: const Text('Category'),
                 selected: false,
                 onSelected: (_) {
                   Get.back();
                 },
               ),
               FilterChip(
-                label: const Text('Account'),
+                label: const Text('Alphabetical'),
                 selected: false,
                 onSelected: (_) {
                   Get.back();
                 },
               ),
               FilterChip(
-                label: const Text('Services'),
+                label: const Text('Frequency'),
                 selected: false,
                 onSelected: (_) {
                   Get.back();
