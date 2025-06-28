@@ -18,9 +18,7 @@ class Task extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+      theme: ThemeData(),
       initialRoute: Routes.homeView,
       getPages: getPages,
       debugShowCheckedModeBanner: false,

@@ -11,9 +11,8 @@ class GeneralSubsection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 570,
+      height: 573,
       child: ListView(
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         children: [
           SizedBox(height: 50, child: CustomSearchBar()),
           SizedBox(height: 20),
@@ -38,7 +37,7 @@ class GeneralSubsection extends StatelessWidget {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac feugiat metus. Nam augue leo, sodales at nisi et, maximus malesuada magna.",
           ),
           SizedBox(height: 5),
-          ...List.generate(7, (index) => CustomListItem()),
+          ...List.generate(15, (index) => CustomListItem()),
         ],
       ),
     );
